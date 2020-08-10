@@ -299,10 +299,10 @@ async def recallInitiative(ctx, *, args=None):
     names = []
     nums = []
     final = []
-    Healths = pickle.load(open("tHisMake5nOsen5e", "rb"))
+    Initiatives = pickle.load(open("XxX32MillinnXxX", "rb"))
     if args is None:
         await ctx.send("Please enter your save name. (.re <save name here>)")
-    elif args in Healths:
+    elif args not in Initiatives:
         await ctx.send("Sorry! Looks like you entered a health save file. Please try again.")
     else:
         try:
@@ -452,11 +452,11 @@ async def Health(ctx, *, args=None):
 @client.command(aliases=["rh"])
 async def recallHeath(ctx, *, args=None):
     lst = []
-    Initiatives = pickle.load(open("XxX32MillinnXxX", "rb"))
+    Healths = pickle.load(open("tHisMake5nOsen5e", "rb"))
     if args is None:
         await ctx.send("Please enter your save name. (.re <save name here>)")
-    elif args in Initiatives:
-        await ctx.send("Sorry! Looks like you entered a initiative save file. Please try again.")
+    elif args not in Healths:
+        await ctx.send("Sorry! Looks like you didn't enter a health file!.")
     else:
         try:
             lOAd = pickle.load(open(str(args), "rb"))
